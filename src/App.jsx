@@ -8,7 +8,7 @@ export default function App() {
     const [equation, setEquation] = useState("");
     const [result, setResult] = useState("");
 
-    const operators = ["+", "-","*", "/", "^", "%", "√", "(", ")"]
+    const operators = ["+", "-","*", "/", "^", "%", "√"];
 
     function addToEquation(str) {
         setEquation(`${equation}${str}`);
@@ -30,24 +30,20 @@ export default function App() {
                 tempString = `${tempString}${character}`;
             }
         }
-        
+
+        if (equation.includes("√")) {
+            equation.replaceAll("√", "Math.sqrt(")
+        }
+
         operation.push(tempString);
     }
 
     function calculate() {
-        const hasParenthesis = equation.includes("(") || equation.includes(")");
-
-        if (!hasParenthesis) {
-            setResult(eval(equation));
-        } else {
-            
-
-        }
-        
+        const result = parse(str);
+        setResult(eval(equation))
         setEquation("");
     }
 
-    ["6", "5", "(3"]
     return <div>
         <div id="calculator">
             <h1>Texas Instruments TI-30XIIS™</h1>
