@@ -44,6 +44,10 @@ export default function App() {
         setEquation("");
     }
 
+    function delLastChar() {
+        setEquation(`${equation.slice(0, -1)}`)
+    }
+    
     return <div>
         <div id="calculator">
             <h1>Texas Instruments TI-30XIIS™</h1>
@@ -75,7 +79,14 @@ export default function App() {
                     ))}
                 </div>
 
-                <Button onClick={calculate}>=</Button>
+                <div id="delete">
+                    <Button onClick={delLastChar}>DEL</Button>
+                </div>
+
+                <div id="equal">
+                    <Button onClick={calculate}>=</Button>
+                </div>
+                
             </div>
             
         </div>
