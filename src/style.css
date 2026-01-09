@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background: linear-gradient(0deg, black, rgb(30, 30, 30));
+    background-size: cover;
+    color: white;
+
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+} 
+
+#calculator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    width: clamp(200px, 40vw, 500px);
+    height: 80vh;
+
+    background-color: gray;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 5px;
+}
+
+#display {
+    width: 95%;
+    height: 10vh;
+    border-color: black;
+    background-color: white;
+    align-self: center;
+}

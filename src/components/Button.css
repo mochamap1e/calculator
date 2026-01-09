@@ -1,0 +1,18 @@
+button {
+    border: 2px solid black;
+    border-radius: 100px;
+
+    width: 3vw;
+    height: 4.5vh;
+    
+    margin: 5px;
+
+    box-shadow: 0 1px 2.6px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 3px 8px;
+    transform: translateY(-1px);
+}
