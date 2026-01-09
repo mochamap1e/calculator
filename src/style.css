@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+    --font: "Atkinson Hyperlegible Mono", Arial, Helvetica, sans-serif
+}
+
 body {
     display: flex;
     align-items: center;
@@ -7,7 +13,10 @@ body {
 
     background: linear-gradient(0deg, black, rgb(30, 30, 30));
     background-size: cover;
+
     color: white;
+
+    font-family: var(--font);
 
     margin: 0;
 }
@@ -16,25 +25,41 @@ h1 {
     text-align: center;
 } 
 
+#buttons {
+    display: grid;
+    grid-template-columns: 4fr 4.5fr 4fr 3.5fr 4fr;
+    grid-template-rows: 6fr 4fr 8fr 4fr;
+}
+
 #calculator {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    
     width: clamp(200px, 40vw, 500px);
     height: 80vh;
 
-    background-color: gray;
-    border-color: black;
-    border-radius: 5px;
-    border-width: 5px;
+
+    background-color: gray;;
+
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
 }
 
 #display {
     width: 95%;
     height: 10vh;
-    border-color: black;
+
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
     background-color: white;
-    align-self: center;
+
+    justify-self: center;
+}
+
+#display h2 {
+    color: black;
+}
+
+#numbers {
+    float: bottom;
 }
